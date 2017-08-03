@@ -2,6 +2,7 @@ import praw
 import config
 import time
 import os
+import requests
 
 def bot_login():
     print("Logging In..")
@@ -19,6 +20,8 @@ def run_bot(r, comments_replied_to):
         if "bot" in comment.body and comment.id not in comments_replied_to and not comment.author == r.user.me():
             print ("String Found")
             # comment.reply("I'm Also a Bot")
+            # joke = requests.get('http://api.icndb.com/jokes/random').json()['value']['joke']
+            # comment.reply = joke
             comments_replied_to.append(comment.id)
 
             with open ("comments_replied_to.txt", "a") as f:
