@@ -1,4 +1,4 @@
-username = "Your_Username"
-password = "Your_PW"
-client_id = "Your_Client_id"
-client_secret = "Your_Client_Secret"
+username = "reddt acct name"
+password = "reddit pw"
+client_id = "your client id"
+client_secret = "your client secret"
