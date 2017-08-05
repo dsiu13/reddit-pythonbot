@@ -17,7 +17,7 @@ def bot_login():
 
 def run_bot(r, comments_replied_to):
     for comment in r.subreddit('test').comments(limit=25):
-        if "test img" in comment.body and comment.id not in comments_replied_to:
+        if "test img" in comment.body and comment.id not in comments_replied_to and not comment.author == r.user.me():
             print ("String Found")
             comment.reply("test img reply: [Here](http://imgur.com/4gp86lR)")
             print ("Replied")
